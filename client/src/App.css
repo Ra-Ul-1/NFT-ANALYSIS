@@ -38,12 +38,28 @@
 }
 
 .Cell {
-  width: 150px;
+  width: 100px;
   border: 1px solid #f4f6f8;
   padding: 4px;
   text-align: left;
+  font-weight: 400;
 }
 
 .Large {
   width: 300px;
 }
+
+.Header{
+  font-weight: bold;
+}
+
+/* a#fav{
+  display: block;
+  width: 48px;
+  height: 48px;
+ 
+ }
+ 
+ a#fav.active{
+  background: url('assets/FullStar.png');
+ } */
