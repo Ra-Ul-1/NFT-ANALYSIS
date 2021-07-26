@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.Cell {
+  width: 150px;
+  border: 1px solid #f4f6f8;
+  padding: 4px;
+  text-align: left;
+}
+
+.Large {
+  width: 300px;
+}
