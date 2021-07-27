@@ -1,0 +1,22 @@
+import axios from 'axios';
+import { signup } from '../services/auth';
+ 
+class AuthService {
+  constructor() {
+    this.service = axios.create({
+      baseURL: 'http://localhost:5005/api',
+      withCredentials: true
+    });
+  }
+}
+
+signup = (username, password) => {
+    return this.service.post('/signup', { username, password }).then(response => response.data);
+  };
+ 
+// class AuthService is used to organize and group the methods.
+// To get an object containing all the methods we just need to
+// instantiate the new AuthService object.
+const authService = new AuthService();
+ 
+export default authService;
