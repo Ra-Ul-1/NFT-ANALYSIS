@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import axios from "axios";
 
 
 // get the user from the backend and pass it to App.js as a prop
@@ -19,6 +20,7 @@ axios.get('/api/auth/loggedin')
       document.getElementById('root')
     );
   })
+  .catch(err => console.log(err))
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

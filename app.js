@@ -42,7 +42,7 @@ app.use(
 const User = require('./models/User.model');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 // passport wants to store as little data as possible in the session so it only uses 
 // the id's (or someting else if we would want to implement that) and not the whole 
@@ -92,10 +92,10 @@ app.use(passport.session());
 
 // 👇 Start handling routes here
 // Contrary to the views version, all routes are controlled from the routes/index.js
-const allRoutes = require("./routes/index");
-app.use("/api/assets", allRoutes);
+// const allRoutes = require("./routes/index");
+// app.use("/api/assets", allRoutes);
 
-const marketOverview = require('./routes/marketOverview');
+const marketOverview = require('./routes');
 
 // connect routes to app.js
 app.use("/", marketOverview);

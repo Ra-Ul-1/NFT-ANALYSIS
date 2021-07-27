@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const User = require('../models/User.model');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
 router.post('/signup', (req, res, next) => {

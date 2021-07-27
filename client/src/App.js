@@ -1,5 +1,5 @@
-import React from "react";
 import "./App.css";
+import React from "react";
 import AssetList from "./components/AssetList"
 import Asset from "./components/Asset"
 import AddFavourite from "./components/AddFavourite";
@@ -9,21 +9,24 @@ import { Route, Redirect } from 'react-router-dom';
 import './App.css';
 
 class App extends React.Component {
-  render () {
-  return (
-    <div className="App">
-          <Navbar/>
-            <Route
-          exact path='/'
-          component={AssetList}
-        />
-        <Route
-          exact path='/favourites'
-          component={AddFavourite}
-        />
-    </div>
-  );
+  state = {
+    user: this.props.user,
   }
+  render () {
+    return (
+      <div className="App">
+            <Navbar/>
+              <Route
+            exact path='/'
+            component={AssetList}
+          />
+          <Route
+            exact path='/favourites'
+            component={AddFavourite}
+          />
+      </div>
+    );
+    }
 }
 
 
