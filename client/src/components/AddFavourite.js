@@ -7,6 +7,9 @@ export default class AddProject extends Component {
         assets: []
     }
 
+
+    // form: when user adds favourite - ask them how much quantity they want and send to backend
+    
     handleSubmit = event => {
         event.preventDefault();
         // make a post request to the server
@@ -26,5 +29,7 @@ export default class AddProject extends Component {
                 </div>
             )
         }
+
+
 
     }
