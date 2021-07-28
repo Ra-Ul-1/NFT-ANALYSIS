@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import AddFavourite from "./AddFavourite";
 
 
 export default class AssetList extends Component {
@@ -37,7 +38,6 @@ export default class AssetList extends Component {
                 <table>
                   <tbody>
                   <tr>
-                      <button type="button" class="btn btn-primary btn-lg" onclick="myFunction()">Add to favourites</button>
                       <th className="Large Cell">{asset.name}</th>
                       <th className="Cell">{(asset.quote.USD.price).toFixed(1)} </th>
                       <th className="Cell">{(asset.quote.USD.volume_24h/1000000000).toFixed(1)} B</th>
@@ -55,6 +55,7 @@ export default class AssetList extends Component {
         })
         return (
           <div>
+          <AddFavourite user={this.props.user} getData={this.getData} {...this.props} />
           <table>
                   <thead>
                   <tr>

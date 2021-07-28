@@ -8,6 +8,6 @@ const assetSchema = new Schema ({
     owner: String,
 });
 
-const Asset = mongoose.model("Asset", articleSchema);
+const Asset = mongoose.model("Asset", assetSchema);
 
 module.exports = Asset;

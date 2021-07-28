@@ -3,6 +3,7 @@ import React from "react";
 import AssetList from "./components/AssetList"
 import Asset from "./components/Asset"
 import AddFavourite from "./components/AddFavourite";
+import Favourites from "./components/Favourites";
 import Navbar from "./components/Navbar";
 import { Route, Redirect } from 'react-router-dom';
 import Signup from './components/Signup';
@@ -27,11 +28,13 @@ class App extends React.Component {
             <Navbar/>
               <Route
             exact path='/'
-            component={AssetList}
+            // component={AssetList}
+            render={props => <AssetList user={this.state.user} setUser={this.setUser} {...props} />}
           />
           <Route
             exact path='/favourites'
-            component={AddFavourite}
+            // component={Favourites}
+            render={props => <Favourites user={this.state.user} setUser={this.setUser} {...props} />}
           />
           <Route
             exact path='/signup'
