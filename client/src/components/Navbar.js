@@ -18,9 +18,12 @@ export default function Navbar(props) {
     return (
 		<nav>
 			<ul>
-				<li>
+				<ul>
 					<Link to='/'>Home</Link>
-				</li>
+				</ul>
+				<ul>
+				<Link to='/favourites/:ownerName'>Favourites</Link>
+				</ul>
 				{/* {props.user ? (
 					<>
 						<li>
