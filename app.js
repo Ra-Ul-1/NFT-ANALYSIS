@@ -95,7 +95,7 @@ app.use(passport.session());
 // const allRoutes = require("./routes/index");
 // app.use("/api/assets", allRoutes);
 
-const marketOverview = require('./routes');
+const marketOverview = require('./routes/index');
 
 // connect routes to app.js
 app.use("/", marketOverview);

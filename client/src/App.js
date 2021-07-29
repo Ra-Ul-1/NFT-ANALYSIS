@@ -25,14 +25,14 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-            <Navbar/>
+            <Navbar user={this.state.user}/>
               <Route
             exact path='/'
             // component={AssetList}
             render={props => <AssetList user={this.state.user} setUser={this.setUser} {...props} />}
           />
           <Route
-            exact path='/favourites'
+            exact path='/favourites/:ownerName'
             // component={Favourites}
             render={props => <Favourites user={this.state.user} setUser={this.setUser} {...props} />}
           />

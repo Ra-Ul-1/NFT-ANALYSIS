@@ -22,7 +22,7 @@ export default function Navbar(props) {
 					<Link to='/'>Home</Link>
 				</ul>
 				<ul>
-				<Link to='/favourites/:ownerName'>Favourites</Link>
+				<Link to={`/favourites/${props.user.username}`}>Favourites</Link>
 				</ul>
 				{/* {props.user ? (
 					<>

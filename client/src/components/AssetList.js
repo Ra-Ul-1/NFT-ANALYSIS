@@ -10,7 +10,7 @@ export default class AssetList extends Component {
     }
 
     getData = () => {
-        axios.get('http://localhost:5005/marketOverview')
+        axios.get('/marketOverview')
         .then(response => {
             this.setState({
                 assets: response.data,
