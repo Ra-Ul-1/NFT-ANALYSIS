@@ -19,10 +19,10 @@ export default function Navbar(props) {
 		<nav>
 			<ul>
 				<ul>
-					<Link to='/'>Home</Link>
+					<Link class="link" to='/'>Home</Link>
 				</ul>
 				<ul>
-				<Link to={`/favourites/${props.user.username}`}>Favourites</Link>
+				<Link class="link" to={`/favourites/${props.user.username}`}>Favourites</Link>
 				</ul>
 				{/* {props.user ? (
 					<>

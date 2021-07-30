@@ -62,6 +62,11 @@
   font-weight: bold;
 }
 
+
+a:visited {
+  color: white;
+  font-weight: bold;
+}
 /* a#fav{
   display: block;
   width: 48px;
