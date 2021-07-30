@@ -28,7 +28,7 @@ export default class AddFavourite extends Component {
             // trigger getData() in Projects.js to retrieve the current list
             // of projects from the server
             // this.props.getData();
-            this.props.history.push('/favourites');
+            // this.props.history.push('/favourites/');
         })
         .catch(err => console.log(err))
         }
@@ -43,7 +43,7 @@ export default class AddFavourite extends Component {
         render() {
             return (
                 <form onSubmit={this.handleSubmit}>
-				<label htmlFor="symbol">Symbol:</label>
+				<label class="form" htmlFor="symbol">Symbol:</label>
 				<input
 					type="text"
 					id="symbol"
@@ -51,7 +51,7 @@ export default class AddFavourite extends Component {
 					value={this.state.symbol}
 					onChange={this.handleChange}
 				/>
-                <label htmlFor="quantity">Quantity:</label>
+                <label class="form" htmlFor="quantity">Quantity:</label>
 				<input
 					type="number"
 					id="quantity"
@@ -59,7 +59,7 @@ export default class AddFavourite extends Component {
 					value={this.state.quantity}
 					onChange={this.handleChange}
 				/>
-                <button type="submit">Hodl this crypto</button>
+                <button class="form" type="submit">I am hodling this crypto</button>
                 </form>
             )
         }

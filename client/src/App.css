@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: black;
+  color: white
 }
 
 .App-logo {
@@ -41,15 +42,20 @@
 
 
 .Cell {
-  width: 100px;
-  border: 1px solid #f4f6f8;
-  padding: 4px;
+  width: 120px;
+  border: 1px solid black;
+  padding: -1px;
+  margin: -1 px;
   text-align: left;
   font-weight: 400;
 }
 
+.Form{
+  font-weight: 500;
+}
+
 .Large {
-  width: 300px;
+  width: 220px;
 }
 
 .Header{

@@ -36,7 +36,7 @@ export default class Favourites extends Component {
                 //     </h3>
                 // </div>
                 <div>
-                <table>
+                <table class= "table">
                   <tbody>
                   <tr>
                       <th className="Large Cell">{asset.name}</th>
@@ -49,7 +49,7 @@ export default class Favourites extends Component {
                       <th className="Cell">{(asset.quote.USD.market_cap/1000000000).toFixed(1)} B</th>
                       <th className="Cell">{asset.cmc_rank}</th>
                       <th className="Cell">{(asset.quantity)}</th>
-                      <th className="Cell">{(asset.quote.USD.price)*(asset.quantity)}</th>
+                      <th className="Cell">{((asset.quote.USD.price)*(asset.quantity)).toFixed(1)}</th>
 
                     </tr>
                   </tbody>
@@ -59,7 +59,7 @@ export default class Favourites extends Component {
         })
         return (
           <div>
-          <table>
+          <table class= "table">
                   <thead>
                   <tr>
                     <th className="Large Header Cell">Coin</th>

@@ -39,6 +39,7 @@ export default class AssetList extends Component {
                   <tbody>
                   <tr>
                       <th className="Large Cell">{asset.name}</th>
+                      <th className="Cell">{asset.symbol}</th>
                       <th className="Cell">{(asset.quote.USD.price).toFixed(1)} </th>
                       <th className="Cell">{(asset.quote.USD.volume_24h/1000000000).toFixed(1)} B</th>
                       <th className="Cell">{(asset.quote.USD.percent_change_90d).toFixed(1)} %</th>
@@ -60,6 +61,7 @@ export default class AssetList extends Component {
                   <thead>
                   <tr>
                     <th className="Large Header Cell">Coin</th>
+                    <th className="Header Cell">Symbol</th>
                     <th className="Header Cell">Price ($)</th>
                     <th className="Header Cell">Volume ($) (24h)</th>
                     <th className="Header Cell">3m</th>
